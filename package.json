@@ -7,7 +7,7 @@
     "start": "node ./bin/www.js",
     "db:createusers": "node -r dotenv/config ./db/scripts/users/createTable.js",
     "dev": "nodemon -r dotenv/config ./bin/www.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --setupFiles dotenv/config"
   },
   "dependencies": {
     "axios": "^0.25.0",
