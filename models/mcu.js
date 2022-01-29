@@ -29,7 +29,6 @@ const getAllMcuMediaDetails = async () => {
 
 
 export function getAllMcuMedia() {
-    console.log(getAllMcuMediaDetails());
     return getAllMcuMediaDetails();
     
 }

@@ -5,8 +5,11 @@ import {getAllMcuMedia} from '../models/mcu.js';
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
-    res.json(getAllMcuMedia());
 
+  getAllMcuMedia().then(data => {
+    res.status(200).json(data);
+  });
+  
   });
   
 export default router;
