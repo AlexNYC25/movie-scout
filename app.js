@@ -7,6 +7,7 @@ import cors  from 'cors';
 import logger  from 'morgan';
 
 import mcuRouter  from './routes/mcu.js';
+import mediaRouter  from './routes/media.js';
 
 const app = express();
 
@@ -18,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/mcu', mcuRouter);
-
+app.use('/media', mediaRouter);
 
 app.use(function (req, res, next) {
   res.status(404).json({message: "We couldn't find what you were looking for 😞"})
