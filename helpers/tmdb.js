@@ -14,6 +14,14 @@ let getMediaDetails = async (id, media_type) => {
     
 }
 
+// function to get media details for a single media id
+export async function getSingleMediaDetails(id, media_type) {
+    let mediaRequest = await getMediaDetails(id, media_type);
+
+    return mediaRequest;
+}
+
+// function to get media details for an array of media ids
 export async function getAllMediaDetails(arr){
     let promiseArr = [];
     
